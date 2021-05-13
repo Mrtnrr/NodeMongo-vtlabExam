@@ -24,7 +24,7 @@ var findByFilters = function findByFilters(req) {
           skip = limit * page - limit; //without filters obtaining those of the current week
 
           dateFrom = req.body.dateFrom ? new Date(req.body.dateFrom) : (0, _moment["default"])().startOf('week').toDate();
-          to = req.body.dateFrom ? new Date(req.body.to) : (0, _moment["default"])().endOf('week').toDate(); //  let count = [ {
+          to = req.body.dateFrom ? new Date(req.body.to) : (0, _moment["default"])().endOf('week').toDate(); //  let count = [ {// uncomment to know detail of the paging
           //       '$lookup': {
           //         'from': 'products', 
           //         'localField': 'products', 
@@ -82,7 +82,7 @@ var findByFilters = function findByFilters(req) {
           deliveries = _context.sent;
           return _context.abrupt("return", {
             deliveries: deliveries,
-            totalResults: deliveries.length // pageInfo
+            totalResults: deliveries.length // pageInfo //uncomment to know detail of the paging 
 
           });
 

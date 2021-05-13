@@ -12,7 +12,7 @@ const findByFilters  = async (req) => {
   //without filters obtaining those of the current week
   let dateFrom = req.body.dateFrom ? new Date(req.body.dateFrom) :  moment().startOf('week').toDate()
   let to = req.body.dateFrom ? new Date(req.body.to) :  moment().endOf('week').toDate()
-  //  let count = [ {
+  //  let count = [ {// uncomment to know detail of the paging
   //       '$lookup': {
   //         'from': 'products', 
   //         'localField': 'products', 
@@ -76,7 +76,7 @@ return {
 
     deliveries,
     totalResults: deliveries.length,
-    // pageInfo
+    // pageInfo //uncomment to know detail of the paging 
   }
 
   } catch (error) {

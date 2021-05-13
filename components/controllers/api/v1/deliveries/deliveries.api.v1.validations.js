@@ -35,7 +35,4 @@ export default {
   'getOne': Joi.object({
     "id": Joi.string().alphanum().min(24).max(24),
   }),
-  //  'getOn': Joi.object({
-  //   "id": Joi.string().alphanum().min(24).max(24),
-  // }),
 }
